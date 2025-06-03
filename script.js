@@ -35,7 +35,7 @@ function createItem(){
   const productName=document.getElementById("productName").value;
   const seller=document.getElementById("seller").value;
   const price=parseFloat(document.getElementById("price").value);
-  db.items.put({id,productName,seller,price }).then(()=>{
+  db.items.add({id,productName,seller,price }).then(()=>{
     showMessage("Item created successfully","success");
     displayItems();
     })
